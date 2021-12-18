@@ -1,0 +1,30 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.2",
+    "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.19.1",
+    "colors": "^1.4.0",
+    "cron": "^1.8.2",
+    "crypto-js": "^4.1.1",
+    "dat-swarm-defaults": "^1.0.2",
+    "discovery-swarm": "^5.1.0",
+    "elliptic": "^6.5.4",
+    "express": "^4.17.1",
+    "get-port": "^6.0.0",
+    "handlebars": "^4.7.7",
+    "level": "^7.0.1",
+    "moment": "^2.29.1",
+    "nopt": "^5.0.0",
+    "update-notifier": "^5.1.0"
+  }
+}
