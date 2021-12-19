@@ -59,6 +59,29 @@ def main():
     print("We borrowed some DAI!")
     get_borrowable_data(lending_pool, account)
 
+    # Repay all of your debt
+    repay_all(amount, lending_pool, account)
+
+    print("You just deposited, borrowed and repayed with Aave, Brownie, and Chainlink!")
+
+def repay_all(amount, lending_pool, account):
+    approve_erc20(
+        Web3.toWei(amount, "ether"),
+        lending_pool,
+        config["networks"][network.show_active()]["dai_token"],
+        account,
+    )
+    repay_tx = lending_pool.repay(
+        config["networks"][network.show_active()]["dai_token"],
+        amount,
+        1,
+        account.address,
+        {"from": account},
+    )
+
+    repay_tx.wait(1)
+    print("All debt Repaid...!")
+
 
 def get_asset_price(price_feed_address):
     # Grab ABI
